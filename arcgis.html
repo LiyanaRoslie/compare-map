@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Directions widget | Sample | ArcGIS API for JavaScript 4.18</title>
+
+    <style>
+      html, body{
+        padding:0;
+        margin:0;
+        height:100%;
+      }
+      #viewDiv {
+        position:relative;
+        width:calc(100% - 380px);
+        height:100%;
+        float:left;
+      }
+      #floating-panel {
+        top:0;
+        float:right;
+        overflow: auto;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.18/"></script>
+
+    <script>
+      require(["esri/Map", "esri/views/MapView", "esri/widgets/Directions"], function(
+        Map,
+        MapView,
+        Directions
+      ) {
+
+        var map = new Map({
+          basemap: "topo-vector"
+        });
+
+        var view = new MapView({
+          scale: 123456789,
+          container: "viewDiv",
+          map: map
+        });
+
+        var directionsWidget = new Directions({
+          view: view,
+          // Point the URL to a valid route service that uses an
+          // ArcGIS Online hosted service proxy instead of the default service
+          routeServiceUrl: "https://utility.arcgis.com/usrsvcs/appservices/w7nD23a0qptSO5iD/rest/services/World/Route/NAServer/Route_World"
+        });
+
+        // Add the Directions widget to the top right corner of the view
+        view.ui.add(directionsWidget, {
+          position: "top-right"
+        });
+      });
+
+      function myFunction1() {
+        var copyText = document.getElementById("input1");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction2() {
+        var copyText = document.getElementById("input2");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction3() {
+        var copyText = document.getElementById("input3");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction4() {
+        var copyText = document.getElementById("input4");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction5() {
+        var copyText = document.getElementById("input5");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction6() {
+        var copyText = document.getElementById("input6");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction7() {
+        var copyText = document.getElementById("input7");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction8() {
+        var copyText = document.getElementById("input8");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction9() {
+        var copyText = document.getElementById("input9");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    function myFunction10() {
+        var copyText = document.getElementById("input10");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+    }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+
+    <div id="floating-panel">
+      <p>
+          MITSU RAYONG <br/>
+          <input type="text" value="12.68336111, 101.2420278" id="input1"><br/>
+          <button onclick="myFunction1()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU KHONKAEN(KALASIN) <br/>
+          <input type="text" value="16.43166667, 103.5275833" id="input2"><br/>
+          <button onclick="myFunction2()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU PATTAYA <br/>
+          <input type="text" value="12.98622222, 100.9226944" id="input3"><br/>
+          <button onclick="myFunction3()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU SURAT <br/>
+          <input type="text" value="9.150805556, 99.37227778" id="input4"><br/>
+          <button onclick="myFunction4()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU SISAKET TT AUTO <br/>
+          <input type="text" value="15.07811111, 104.3443333" id="input5"><br/>
+          <button onclick="myFunction5()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU KHONKAEN(CHUMPHAE) <br/>
+          <input type="text" value="16.53380556, 102.1056667" id="input6"><br/>
+          <button onclick="myFunction6()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU AYUTTHAYA (THAITADA) <br/>
+          <input type="text" value="14.21063889, 100.6765556" id="input7"><br/>
+          <button onclick="myFunction7()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU B.N.T. <br/>
+          <input type="text" value="13.5325, 100.9655" id="input8"><br/>
+          <button onclick="myFunction8()">Copy text</button>
+      </p>
+
+      <p>
+          MITSU CARS AND SERVICE <br/>
+          <input type="text" value="13.40036111, 101.0056667" id="input9"><br/>
+          <button onclick="myFunction9()">Copy text</button>
+      </p>
+
+      <p>
+        VIVATPANICH <br/>
+        <input type="text" value="12.682, 101.2706111" id="input10"><br/>
+        <button onclick="myFunction10()">Copy text</button>
+    </p>
+      
+  </div>
+  </body>
+</html>
