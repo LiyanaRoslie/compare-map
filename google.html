@@ -117,6 +117,7 @@
             origin: start,
             destination: end,
             travelMode: google.maps.TravelMode.DRIVING,
+            trafficModel: bestguess
           },
           (response, status) => {
             if (status === "OK") {
